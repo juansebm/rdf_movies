@@ -1,3 +1,5 @@
+@base <http://raw.githubusercontent.com/juansebm/rdf_movies/refs/heads/main/netflix_imdb_movies.ttl> .
+
 @prefix ex: <http://example.org/netflix/> .
 @prefix schema1: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
