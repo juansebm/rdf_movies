@@ -1,4 +1,4 @@
-@prefix ex: <http://example.org/netflix/> .
+@prefix ex: <http://example.org/> .
 @prefix schema1: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
