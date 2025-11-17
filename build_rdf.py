@@ -5,8 +5,12 @@ from datetime import date
 from decimal import Decimal, InvalidOperation
 
 df = pd.read_csv('netflix_imdb_movies.csv')
-df = df[df['release_year'] == 2021]
-df = df.sort_values('averageRating', ascending=False).head(40)
+# Filtrar solo películas con rating válido
+df = df[df['averageRating'].notna()]
+# Agrupar por año y tomar la mejor película de cada año
+df = df.loc[df.groupby('release_year')['averageRating'].idxmax()]
+# Ordenar por año descendente y tomar los 30 años más recientes
+df = df.sort_values('release_year', ascending=False).head(40)
 base_uri = 'http://raw.githubusercontent.com/juansebm/rdf_movies/main/netflix_imdb_movies.ttl'
 netflix_ns = Namespace(f'{base_uri}#')
 schema = Namespace('http://schema.org/')
