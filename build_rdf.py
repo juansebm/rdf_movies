@@ -1,16 +1,41 @@
 import pandas as pd
-from rdflib import Graph, Namespace, URIRef, Literal
-from rdflib.namespace import RDF, XSD
+from rdflib import Graph, Literal, Namespace, URIRef
+from rdflib.namespace import DCTERMS, FOAF, RDF, RDFS, XSD
+from datetime import date
+from decimal import Decimal, InvalidOperation
 
 df = pd.read_csv('netflix_imdb_movies.csv')
+df = df[df['release_year'] == 2021]
+df = df.sort_values('averageRating', ascending=False).head(40)
+base_uri = 'http://raw.githubusercontent.com/juansebm/rdf_movies/main/netflix_imdb_movies.ttl'
+netflix_ns = Namespace(f'{base_uri}#')
 schema = Namespace('http://schema.org/')
-ex = Namespace('http://example.org/netflix/')
-g = Graph()
-g.bind('schema', schema)
-g.bind('ex', ex)
+social = Namespace('http://raw.githubusercontent.com/juansebm/lab10_webofdata/main/social.ttl#')
+
+g = Graph(base=base_uri)
+g.bind('rdf', RDF, override=True, replace=True)
+g.bind('rdfs', RDFS, override=True, replace=True)
+g.bind('foaf', FOAF, override=True, replace=True)
+g.bind('dc', DCTERMS, override=True, replace=True)
+g.bind('xsd', XSD, override=True, replace=True)
+g.bind('schema1', schema, override=True, replace=True)
+g.bind('social', social, override=True, replace=True)
+g.bind('netflix', netflix_ns, override=True, replace=True)
+
+document = URIRef(base_uri)
+catalog = URIRef(f'{base_uri}#catalog')
+g.add((document, RDF.type, FOAF.Document))
+g.add((document, DCTERMS.date, Literal(date.today(), datatype=XSD.date)))
+g.add((document, DCTERMS.title, Literal("Netflix & IMDb Movies dataset", lang='en')))
+g.add((document, FOAF.primaryTopic, catalog))
+g.add((document, DCTERMS.creator, catalog))
+g.add((catalog, RDF.type, schema.Dataset))
+g.add((catalog, RDFS.label, Literal("Netflix & IMDb Movies", lang='en')))
+g.add((catalog, DCTERMS.description, Literal("Dataset linking Netflix titles with IMDb identifiers and ratings.", lang='en')))
 
 for row in df.to_dict('records'):
-    movie = ex[row['show_id']]
+    movie = netflix_ns[row['show_id']]
+    g.add((catalog, schema.hasPart, movie))
     g.add((movie, RDF.type, schema.Movie))
     g.add((movie, schema.name, Literal(row['title'])))
     if isinstance(row['country'], str):
@@ -28,9 +53,15 @@ for row in df.to_dict('records'):
     if isinstance(row['duration'], str) and row['duration'].endswith(' min'):
         minutes = row['duration'].split(' ')[0]
         if minutes.isdigit():
-            g.add((movie, schema.duration, Literal(f'PT{minutes}M')))
-    if isinstance(row.get('averageRating'), (int, float)) and pd.notna(row['averageRating']):
-        g.add((movie, schema.ratingValue, Literal(row['averageRating'], datatype=XSD.decimal)))
+            g.add((movie, schema.duration, Literal(f'PT{minutes}M', datatype=XSD.duration)))
+    rating = row.get('averageRating')
+    if pd.notna(rating):
+        try:
+            rating_value = Decimal(str(rating))
+        except (InvalidOperation, TypeError, ValueError):
+            rating_value = None
+        if rating_value is not None:
+            g.add((movie, schema.ratingValue, Literal(rating_value, datatype=XSD.decimal)))
     if isinstance(row.get('tconst'), str):
         g.add((movie, schema.sameAs, URIRef(f'https://www.imdb.com/title/{row["tconst"]}/')))
 

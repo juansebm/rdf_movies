@@ -13,6 +13,8 @@ with Progress(transient=True) as progress:
     merged = movies.merge(basics, left_on='title', right_on='primaryTitle')
     merged = merged.merge(ratings, on='tconst', how='left')
     merged = merged.drop_duplicates(subset='show_id')
+    merged = merged.replace(r'^\s*$', pd.NA, regex=True)
+    merged = merged.dropna(subset=['show_id', 'title', 'tconst', 'averageRating'])
     cols = [columna for columna in movies.columns if columna != 'description']
     merged[cols + ['tconst', 'averageRating']].to_csv('netflix_imdb_movies.csv', index=False)
     progress.advance(task)
