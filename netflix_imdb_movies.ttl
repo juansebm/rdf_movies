@@ -9,26 +9,51 @@
 
 <> a foaf:Document ;
     dc:creator netflix:catalog ;
-    dc:date "2025-11-16"^^xsd:date ;
+    dc:date "2025-11-19"^^xsd:date ;
     dc:title "Netflix & IMDb Movies dataset"@en ;
     foaf:primaryTopic netflix:catalog .
 
-netflix:s1397 a schema:Movie ;
-    rdfs:label "Homefront" ;
-    dc:coverage "United States" ;
-    dc:date "January 18, 2021" ;
-    dc:issued "2013"^^xsd:gYear ;
-    dc:subject "Action & Adventure" ;
-    dc:title "Homefront" ;
-    schema:contentRating "R" ;
-    schema:countryOfOrigin "United States" ;
-    schema:datePublished "2013"^^xsd:gYear ;
-    schema:director directors:director_Gary_Fleder ;
-    schema:duration "PT1H40M"^^xsd:duration ;
-    schema:genre "Action & Adventure" ;
-    schema:ratingValue 8.9 ;
-    schema:sameAs <https://www.imdb.com/title/tt0101121/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0101121/> .
+netflix:s1099 a schema:Movie ;
+    rdfs:label "Mandela" ;
+    dc:coverage "India" ;
+    dc:date "April 5, 2021" ;
+    dc:issued "2021"^^xsd:gYear ;
+    dc:subject "Comedies",
+        "Dramas",
+        "International Movies" ;
+    dc:title "Mandela" ;
+    schema:contentRating "TV-14" ;
+    schema:countryOfOrigin "India" ;
+    schema:datePublished "2021"^^xsd:gYear ;
+    schema:director directors:director_Madonne_Ashwin ;
+    schema:duration "PT2H20M"^^xsd:duration ;
+    schema:genre "Comedies",
+        "Dramas",
+        "International Movies" ;
+    schema:ratingValue 8.3 ;
+    schema:sameAs <https://www.imdb.com/title/tt10687070/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt10687070/> .
+
+netflix:s1115 a schema:Movie ;
+    rdfs:label "3 Idiots" ;
+    dc:coverage "India" ;
+    dc:date "April 1, 2021" ;
+    dc:issued "2009"^^xsd:gYear ;
+    dc:subject "Comedies",
+        "Dramas",
+        "International Movies" ;
+    dc:title "3 Idiots" ;
+    schema:contentRating "PG-13" ;
+    schema:countryOfOrigin "India" ;
+    schema:datePublished "2009"^^xsd:gYear ;
+    schema:director directors:director_Rajkumar_Hirani ;
+    schema:duration "PT2H44M"^^xsd:duration ;
+    schema:genre "Comedies",
+        "Dramas",
+        "International Movies" ;
+    schema:ratingValue 8.4 ;
+    schema:sameAs <https://www.imdb.com/title/tt1187043/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt1187043/> .
 
 netflix:s1422 a schema:Movie ;
     rdfs:label "The Intouchables" ;
@@ -52,47 +77,64 @@ netflix:s1422 a schema:Movie ;
     schema:sameAs <https://www.imdb.com/title/tt1675434/> ;
     rdfs:seeAlso <https://www.imdb.com/title/tt1675434/> .
 
-netflix:s1887 a schema:Movie ;
-    rdfs:label "David Attenborough: A Life on Our Planet" ;
-    dc:coverage "United Kingdom",
-        "United States" ;
-    dc:date "October 4, 2020" ;
-    dc:issued "2020"^^xsd:gYear ;
-    dc:subject "Documentaries" ;
-    dc:title "David Attenborough: A Life on Our Planet" ;
-    schema:contentRating "PG" ;
-    schema:countryOfOrigin "United Kingdom",
-        "United States" ;
-    schema:datePublished "2020"^^xsd:gYear ;
-    schema:director directors:director_Alastair_Fothergill,
-        directors:director_Jonnie_Hughes,
-        directors:director_Keith_Scholey ;
-    schema:duration "PT1H24M"^^xsd:duration ;
-    schema:genre "Documentaries" ;
-    schema:ratingValue 8.9 ;
-    schema:sameAs <https://www.imdb.com/title/tt11989890/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt11989890/> .
-
-netflix:s2283 a schema:Movie ;
-    rdfs:label "One by Two" ;
+netflix:s1674 a schema:Movie ;
+    rdfs:label "Black Friday" ;
     dc:coverage "India" ;
-    dc:date "July 5, 2020" ;
-    dc:issued "2014"^^xsd:gYear ;
-    dc:subject "Comedies",
-        "Dramas",
+    dc:date "November 19, 2020" ;
+    dc:issued "2004"^^xsd:gYear ;
+    dc:subject "Dramas",
         "International Movies" ;
-    dc:title "One by Two" ;
-    schema:contentRating "TV-14" ;
+    dc:title "Black Friday" ;
+    schema:contentRating "TV-MA" ;
     schema:countryOfOrigin "India" ;
-    schema:datePublished "2014"^^xsd:gYear ;
-    schema:director directors:director_Devika_Bhagat ;
-    schema:duration "PT2H15M"^^xsd:duration ;
-    schema:genre "Comedies",
-        "Dramas",
+    schema:datePublished "2004"^^xsd:gYear ;
+    schema:director directors:director_Anurag_Kashyap ;
+    schema:duration "PT2H42M"^^xsd:duration ;
+    schema:genre "Dramas",
         "International Movies" ;
-    schema:ratingValue 9.3 ;
-    schema:sameAs <https://www.imdb.com/title/tt13416756/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt13416756/> .
+    schema:ratingValue 8.4 ;
+    schema:sameAs <https://www.imdb.com/title/tt0400234/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt0400234/> .
+
+netflix:s1703 a schema:Movie ;
+    rdfs:label "Fukrey Boyzzz: Space Mein Fukrapanti" ;
+    dc:coverage "India" ;
+    dc:date "November 13, 2020" ;
+    dc:issued "2020"^^xsd:gYear ;
+    dc:subject "Children & Family Movies",
+        "Comedies" ;
+    dc:title "Fukrey Boyzzz: Space Mein Fukrapanti" ;
+    schema:contentRating "TV-Y7" ;
+    schema:countryOfOrigin "India" ;
+    schema:datePublished "2020"^^xsd:gYear ;
+    schema:director directors:director_Avinash_Walzade ;
+    schema:duration "PT1H15M"^^xsd:duration ;
+    schema:genre "Children & Family Movies",
+        "Comedies" ;
+    schema:ratingValue 8.5 ;
+    schema:sameAs <https://www.imdb.com/title/tt13502066/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt13502066/> .
+
+netflix:s1822 a schema:Movie ;
+    rdfs:label "Listen" ;
+    dc:coverage "Lebanon" ;
+    dc:date "October 19, 2020" ;
+    dc:issued "2017"^^xsd:gYear ;
+    dc:subject "Dramas",
+        "Independent Movies",
+        "International Movies" ;
+    dc:title "Listen" ;
+    schema:contentRating "TV-MA" ;
+    schema:countryOfOrigin "Lebanon" ;
+    schema:datePublished "2017"^^xsd:gYear ;
+    schema:director directors:director_Philippe_Aractingi ;
+    schema:duration "PT1H43M"^^xsd:duration ;
+    schema:genre "Dramas",
+        "Independent Movies",
+        "International Movies" ;
+    schema:ratingValue 9.2 ;
+    schema:sameAs <https://www.imdb.com/title/tt3766102/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt3766102/> .
 
 netflix:s254 a schema:Movie ;
     rdfs:label "Bombay" ;
@@ -115,85 +157,127 @@ netflix:s254 a schema:Movie ;
     schema:sameAs <https://www.imdb.com/title/tt0112553/> ;
     rdfs:seeAlso <https://www.imdb.com/title/tt0112553/> .
 
-netflix:s2730 a schema:Movie ;
-    rdfs:label "Kaal" ;
-    dc:coverage "India" ;
-    dc:date "April 1, 2020" ;
-    dc:issued "2005"^^xsd:gYear ;
-    dc:subject "Horror Movies",
-        "International Movies",
-        "Thrillers" ;
-    dc:title "Kaal" ;
-    schema:contentRating "TV-14" ;
-    schema:countryOfOrigin "India" ;
-    schema:datePublished "2005"^^xsd:gYear ;
-    schema:director directors:director_Soham_Shah ;
-    schema:duration "PT2H6M"^^xsd:duration ;
-    schema:genre "Horror Movies",
-        "International Movies",
-        "Thrillers" ;
-    schema:ratingValue 8.7 ;
-    schema:sameAs <https://www.imdb.com/title/tt0205172/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0205172/> .
-
-netflix:s3148 a schema:Movie ;
-    rdfs:label "Talaash" ;
-    dc:coverage "India" ;
-    dc:date "December 15, 2019" ;
-    dc:issued "2012"^^xsd:gYear ;
+netflix:s2864 a schema:Movie ;
+    rdfs:label "There Will Be Blood" ;
+    dc:coverage "United States" ;
+    dc:date "March 1, 2020" ;
+    dc:issued "2007"^^xsd:gYear ;
     dc:subject "Dramas",
-        "International Movies",
-        "Thrillers" ;
-    dc:title "Talaash" ;
-    schema:contentRating "TV-14" ;
-    schema:countryOfOrigin "India" ;
-    schema:datePublished "2012"^^xsd:gYear ;
-    schema:director directors:director_Reema_Kagti ;
-    schema:duration "PT2H20M"^^xsd:duration ;
-    schema:genre "Dramas",
-        "International Movies",
-        "Thrillers" ;
-    schema:ratingValue 9.4 ;
-    schema:sameAs <https://www.imdb.com/title/tt0156120/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0156120/> .
-
-netflix:s4722 a schema:Movie ;
-    rdfs:label "Fashion" ;
-    dc:coverage "India" ;
-    dc:date "August 2, 2018" ;
-    dc:issued "2008"^^xsd:gYear ;
-    dc:subject "Dramas",
-        "International Movies" ;
-    dc:title "Fashion" ;
-    schema:contentRating "TV-MA" ;
-    schema:countryOfOrigin "India" ;
-    schema:datePublished "2008"^^xsd:gYear ;
-    schema:director directors:director_Madhur_Bhandarkar ;
+        "Independent Movies" ;
+    dc:title "There Will Be Blood" ;
+    schema:contentRating "R" ;
+    schema:countryOfOrigin "United States" ;
+    schema:datePublished "2007"^^xsd:gYear ;
+    schema:director directors:director_Paul_Thomas_Anderson ;
     schema:duration "PT2H38M"^^xsd:duration ;
     schema:genre "Dramas",
-        "International Movies" ;
-    schema:ratingValue 9.2 ;
-    schema:sameAs <https://www.imdb.com/title/tt0230204/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0230204/> .
-
-netflix:s5015 a schema:Movie ;
-    rdfs:label "Swades" ;
-    dc:coverage "India" ;
-    dc:date "March 1, 2018" ;
-    dc:issued "2004"^^xsd:gYear ;
-    dc:subject "Dramas",
-        "International Movies" ;
-    dc:title "Swades" ;
-    schema:contentRating "TV-PG" ;
-    schema:countryOfOrigin "India" ;
-    schema:datePublished "2004"^^xsd:gYear ;
-    schema:director directors:director_Ashutosh_Gowariker ;
-    schema:duration "PT3H5M"^^xsd:duration ;
-    schema:genre "Dramas",
-        "International Movies" ;
+        "Independent Movies" ;
     schema:ratingValue 8.2 ;
-    schema:sameAs <https://www.imdb.com/title/tt0367110/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0367110/> .
+    schema:sameAs <https://www.imdb.com/title/tt0469494/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt0469494/> .
+
+netflix:s3005 a schema:Movie ;
+    rdfs:label "KD (A) Karuppudurai" ;
+    dc:coverage "India" ;
+    dc:date "January 21, 2020" ;
+    dc:issued "2019"^^xsd:gYear ;
+    dc:subject "Comedies",
+        "Dramas",
+        "Independent Movies" ;
+    dc:title "KD (A) Karuppudurai" ;
+    schema:contentRating "TV-14" ;
+    schema:countryOfOrigin "India" ;
+    schema:datePublished "2019"^^xsd:gYear ;
+    schema:director directors:director_Madhumita ;
+    schema:duration "PT1H56M"^^xsd:duration ;
+    schema:genre "Comedies",
+        "Dramas",
+        "Independent Movies" ;
+    schema:ratingValue 8.4 ;
+    schema:sameAs <https://www.imdb.com/title/tt8747560/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt8747560/> .
+
+netflix:s3179 a schema:Movie ;
+    rdfs:label "Wives on Strike" ;
+    dc:coverage "Nigeria" ;
+    dc:date "December 6, 2019" ;
+    dc:issued "2016"^^xsd:gYear ;
+    dc:subject "Comedies",
+        "Dramas",
+        "International Movies" ;
+    dc:title "Wives on Strike" ;
+    schema:contentRating "TV-14" ;
+    schema:countryOfOrigin "Nigeria" ;
+    schema:datePublished "2016"^^xsd:gYear ;
+    schema:director directors:director_Omoni_Oboli ;
+    schema:duration "PT1H32M"^^xsd:duration ;
+    schema:genre "Comedies",
+        "Dramas",
+        "International Movies" ;
+    schema:ratingValue 8.7 ;
+    schema:sameAs <https://www.imdb.com/title/tt14605594/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt14605594/> .
+
+netflix:s341 a schema:Movie ;
+    rdfs:label "Inception" ;
+    dc:coverage "United Kingdom",
+        "United States" ;
+    dc:date "August 1, 2021" ;
+    dc:issued "2010"^^xsd:gYear ;
+    dc:subject "Action & Adventure",
+        "Sci-Fi & Fantasy",
+        "Thrillers" ;
+    dc:title "Inception" ;
+    schema:contentRating "PG-13" ;
+    schema:countryOfOrigin "United Kingdom",
+        "United States" ;
+    schema:datePublished "2010"^^xsd:gYear ;
+    schema:director directors:director_Christopher_Nolan ;
+    schema:duration "PT2H28M"^^xsd:duration ;
+    schema:genre "Action & Adventure",
+        "Sci-Fi & Fantasy",
+        "Thrillers" ;
+    schema:ratingValue 8.8 ;
+    schema:sameAs <https://www.imdb.com/title/tt1375666/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt1375666/> .
+
+netflix:s393 a schema:Movie ;
+    rdfs:label "Django Unchained" ;
+    dc:coverage "United States" ;
+    dc:date "July 24, 2021" ;
+    dc:issued "2012"^^xsd:gYear ;
+    dc:subject "Action & Adventure",
+        "Dramas" ;
+    dc:title "Django Unchained" ;
+    schema:contentRating "R" ;
+    schema:countryOfOrigin "United States" ;
+    schema:datePublished "2012"^^xsd:gYear ;
+    schema:director directors:director_Quentin_Tarantino ;
+    schema:duration "PT2H45M"^^xsd:duration ;
+    schema:genre "Action & Adventure",
+        "Dramas" ;
+    schema:ratingValue 8.5 ;
+    schema:sameAs <https://www.imdb.com/title/tt1853728/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt1853728/> .
+
+netflix:s4994 a schema:Movie ;
+    rdfs:label "The Outsider" ;
+    dc:coverage "United States" ;
+    dc:date "March 9, 2018" ;
+    dc:issued "2018"^^xsd:gYear ;
+    dc:subject "Dramas",
+        "Thrillers" ;
+    dc:title "The Outsider" ;
+    schema:contentRating "TV-MA" ;
+    schema:countryOfOrigin "United States" ;
+    schema:datePublished "2018"^^xsd:gYear ;
+    schema:director directors:director_Martin_Zandvliet ;
+    schema:duration "PT2H1M"^^xsd:duration ;
+    schema:genre "Dramas",
+        "Thrillers" ;
+    schema:ratingValue 8.6 ;
+    schema:sameAs <https://www.imdb.com/title/tt10289896/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt10289896/> .
 
 netflix:s5571 a schema:Movie ;
     rdfs:label "Howards End" ;
@@ -216,9 +300,9 @@ netflix:s5571 a schema:Movie ;
     schema:genre "Classic Movies",
         "Dramas",
         "Independent Movies" ;
-    schema:ratingValue 9.2 ;
-    schema:sameAs <https://www.imdb.com/title/tt0065860/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0065860/> .
+    schema:ratingValue 7.4 ;
+    schema:sameAs <https://www.imdb.com/title/tt0104454/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt0104454/> .
 
 netflix:s565 a schema:Movie ;
     rdfs:label "Boogie Nights" ;
@@ -241,26 +325,26 @@ netflix:s565 a schema:Movie ;
     schema:sameAs <https://www.imdb.com/title/tt0118749/> ;
     rdfs:seeAlso <https://www.imdb.com/title/tt0118749/> .
 
-netflix:s595 a schema:Movie ;
-    rdfs:label "Star Trek" ;
-    dc:coverage "Germany",
-        "United States" ;
-    dc:date "July 1, 2021" ;
-    dc:issued "2009"^^xsd:gYear ;
+netflix:s6064 a schema:Movie ;
+    rdfs:label "A Wednesday" ;
+    dc:coverage "India" ;
+    dc:date "November 1, 2018" ;
+    dc:issued "2008"^^xsd:gYear ;
     dc:subject "Action & Adventure",
-        "Sci-Fi & Fantasy" ;
-    dc:title "Star Trek" ;
-    schema:contentRating "PG-13" ;
-    schema:countryOfOrigin "Germany",
-        "United States" ;
-    schema:datePublished "2009"^^xsd:gYear ;
-    schema:director directors:director_J_J__Abrams ;
-    schema:duration "PT2H8M"^^xsd:duration ;
+        "Dramas",
+        "International Movies" ;
+    dc:title "A Wednesday" ;
+    schema:contentRating "TV-MA" ;
+    schema:countryOfOrigin "India" ;
+    schema:datePublished "2008"^^xsd:gYear ;
+    schema:director directors:director_Neeraj_Pandey ;
+    schema:duration "PT1H43M"^^xsd:duration ;
     schema:genre "Action & Adventure",
-        "Sci-Fi & Fantasy" ;
-    schema:ratingValue 8.4 ;
-    schema:sameAs <https://www.imdb.com/title/tt0060028/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0060028/> .
+        "Dramas",
+        "International Movies" ;
+    schema:ratingValue 8.1 ;
+    schema:sameAs <https://www.imdb.com/title/tt1280558/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt1280558/> .
 
 netflix:s6144 a schema:Movie ;
     rdfs:label "American History X" ;
@@ -279,20 +363,44 @@ netflix:s6144 a schema:Movie ;
     schema:sameAs <https://www.imdb.com/title/tt0120586/> ;
     rdfs:seeAlso <https://www.imdb.com/title/tt0120586/> .
 
-netflix:s617 a schema:Movie ;
-    rdfs:label "Working Title" ;
-    dc:date "July 1, 2021" ;
-    dc:issued "2019"^^xsd:gYear ;
-    dc:subject "Dramas" ;
-    dc:title "Working Title" ;
-    schema:contentRating "R" ;
-    schema:datePublished "2019"^^xsd:gYear ;
-    schema:director directors:director_Mary_Harron ;
+netflix:s6257 a schema:Movie ;
+    rdfs:label "Be Here Now" ;
+    dc:coverage "Australia",
+        "United States" ;
+    dc:date "February 28, 2017" ;
+    dc:issued "2015"^^xsd:gYear ;
+    dc:subject "Documentaries" ;
+    dc:title "Be Here Now" ;
+    schema:contentRating "TV-MA" ;
+    schema:countryOfOrigin "Australia",
+        "United States" ;
+    schema:datePublished "2015"^^xsd:gYear ;
+    schema:director directors:director_Lilibet_Foster ;
     schema:duration "PT1H50M"^^xsd:duration ;
-    schema:genre "Dramas" ;
-    schema:ratingValue 9.4 ;
-    schema:sameAs <https://www.imdb.com/title/tt0250823/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0250823/> .
+    schema:genre "Documentaries" ;
+    schema:ratingValue 8.5 ;
+    schema:sameAs <https://www.imdb.com/title/tt2473476/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt2473476/> .
+
+netflix:s6262 a schema:Movie ;
+    rdfs:label "Beary Tales" ;
+    dc:coverage "United States" ;
+    dc:date "March 1, 2017" ;
+    dc:issued "2013"^^xsd:gYear ;
+    dc:subject "Children & Family Movies",
+        "Documentaries",
+        "International Movies" ;
+    dc:title "Beary Tales" ;
+    schema:contentRating "TV-G" ;
+    schema:countryOfOrigin "United States" ;
+    schema:datePublished "2013"^^xsd:gYear ;
+    schema:duration "PT52M"^^xsd:duration ;
+    schema:genre "Children & Family Movies",
+        "Documentaries",
+        "International Movies" ;
+    schema:ratingValue 8.2 ;
+    schema:sameAs <https://www.imdb.com/title/tt6780296/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt6780296/> .
 
 netflix:s6544 a schema:Movie ;
     rdfs:label "Crouching Tiger, Hidden Dragon" ;
@@ -321,110 +429,6 @@ netflix:s6544 a schema:Movie ;
     schema:sameAs <https://www.imdb.com/title/tt0190332/> ;
     rdfs:seeAlso <https://www.imdb.com/title/tt0190332/> .
 
-netflix:s6861 a schema:Movie ;
-    rdfs:label "God of War" ;
-    dc:coverage "China",
-        "Hong Kong" ;
-    dc:date "December 16, 2017" ;
-    dc:issued "2017"^^xsd:gYear ;
-    dc:subject "Action & Adventure",
-        "International Movies" ;
-    dc:title "God of War" ;
-    schema:contentRating "NR" ;
-    schema:countryOfOrigin "China",
-        "Hong Kong" ;
-    schema:datePublished "2017"^^xsd:gYear ;
-    schema:director directors:director_Gordon_Chan ;
-    schema:duration "PT2H9M"^^xsd:duration ;
-    schema:genre "Action & Adventure",
-        "International Movies" ;
-    schema:ratingValue 9.0 ;
-    schema:sameAs <https://www.imdb.com/title/tt0416779/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0416779/> .
-
-netflix:s6953 a schema:Movie ;
-    rdfs:label "Hedgehogs" ;
-    dc:coverage "China",
-        "United States" ;
-    dc:date "April 1, 2019" ;
-    dc:issued "2016"^^xsd:gYear ;
-    dc:subject "Children & Family Movies" ;
-    dc:title "Hedgehogs" ;
-    schema:contentRating "PG" ;
-    schema:countryOfOrigin "China",
-        "United States" ;
-    schema:datePublished "2016"^^xsd:gYear ;
-    schema:director directors:director_Huang_Jianming ;
-    schema:duration "PT1H34M"^^xsd:duration ;
-    schema:genre "Children & Family Movies" ;
-    schema:ratingValue 9.3 ;
-    schema:sameAs <https://www.imdb.com/title/tt0840478/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0840478/> .
-
-netflix:s6967 a schema:Movie ;
-    rdfs:label "Hide & Seek" ;
-    dc:coverage "India" ;
-    dc:date "March 1, 2018" ;
-    dc:issued "2010"^^xsd:gYear ;
-    dc:subject "Horror Movies",
-        "International Movies",
-        "Thrillers" ;
-    dc:title "Hide & Seek" ;
-    schema:contentRating "TV-14" ;
-    schema:countryOfOrigin "India" ;
-    schema:datePublished "2010"^^xsd:gYear ;
-    schema:director directors:director_Shawn_Arranha ;
-    schema:duration "PT1H36M"^^xsd:duration ;
-    schema:genre "Horror Movies",
-        "International Movies",
-        "Thrillers" ;
-    schema:ratingValue 9.4 ;
-    schema:sameAs <https://www.imdb.com/title/tt0415845/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0415845/> .
-
-netflix:s7592 a schema:Movie ;
-    rdfs:label "No Estoy Loca" ;
-    dc:coverage "Chile" ;
-    dc:date "May 4, 2018" ;
-    dc:issued "2018"^^xsd:gYear ;
-    dc:subject "Comedies",
-        "Dramas",
-        "International Movies" ;
-    dc:title "No Estoy Loca" ;
-    schema:contentRating "TV-MA" ;
-    schema:countryOfOrigin "Chile" ;
-    schema:datePublished "2018"^^xsd:gYear ;
-    schema:director directors:director_Nicolás_López ;
-    schema:duration "PT1H56M"^^xsd:duration ;
-    schema:genre "Comedies",
-        "Dramas",
-        "International Movies" ;
-    schema:ratingValue 9.4 ;
-    schema:sameAs <https://www.imdb.com/title/tt10893480/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt10893480/> .
-
-netflix:s7669 a schema:Movie ;
-    rdfs:label "Only the Dead" ;
-    dc:coverage "Australia",
-        "Iraq" ;
-    dc:date "November 15, 2018" ;
-    dc:issued "2015"^^xsd:gYear ;
-    dc:subject "Documentaries",
-        "International Movies" ;
-    dc:title "Only the Dead" ;
-    schema:contentRating "TV-MA" ;
-    schema:countryOfOrigin "Australia",
-        "Iraq" ;
-    schema:datePublished "2015"^^xsd:gYear ;
-    schema:director directors:director_Bill_Guttentag,
-        directors:director_Michael_Ware ;
-    schema:duration "PT1H16M"^^xsd:duration ;
-    schema:genre "Documentaries",
-        "International Movies" ;
-    schema:ratingValue 8.9 ;
-    schema:sameAs <https://www.imdb.com/title/tt0876140/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0876140/> .
-
 netflix:s7803 a schema:Movie ;
     rdfs:label "Pulp Fiction" ;
     dc:coverage "United States" ;
@@ -446,6 +450,27 @@ netflix:s7803 a schema:Movie ;
     schema:sameAs <https://www.imdb.com/title/tt0110912/> ;
     rdfs:seeAlso <https://www.imdb.com/title/tt0110912/> .
 
+netflix:s7804 a schema:Movie ;
+    rdfs:label "Punjab 1984" ;
+    dc:coverage "Canada",
+        "India" ;
+    dc:date "November 1, 2017" ;
+    dc:issued "2014"^^xsd:gYear ;
+    dc:subject "Dramas",
+        "International Movies" ;
+    dc:title "Punjab 1984" ;
+    schema:contentRating "TV-14" ;
+    schema:countryOfOrigin "Canada",
+        "India" ;
+    schema:datePublished "2014"^^xsd:gYear ;
+    schema:director directors:director_Anurag_Singh ;
+    schema:duration "PT2H38M"^^xsd:duration ;
+    schema:genre "Dramas",
+        "International Movies" ;
+    schema:ratingValue 8.3 ;
+    schema:sameAs <https://www.imdb.com/title/tt3607198/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt3607198/> .
+
 netflix:s7958 a schema:Movie ;
     rdfs:label "Schindler's List" ;
     dc:coverage "United States" ;
@@ -465,23 +490,6 @@ netflix:s7958 a schema:Movie ;
     schema:sameAs <https://www.imdb.com/title/tt0108052/> ;
     rdfs:seeAlso <https://www.imdb.com/title/tt0108052/> .
 
-netflix:s827 a schema:Movie ;
-    rdfs:label "Bo Burnham: Inside" ;
-    dc:coverage "United States" ;
-    dc:date "May 30, 2021" ;
-    dc:issued "2021"^^xsd:gYear ;
-    dc:subject "Stand-Up Comedy" ;
-    dc:title "Bo Burnham: Inside" ;
-    schema:contentRating "TV-MA" ;
-    schema:countryOfOrigin "United States" ;
-    schema:datePublished "2021"^^xsd:gYear ;
-    schema:director directors:director_Bo_Burnham ;
-    schema:duration "PT1H28M"^^xsd:duration ;
-    schema:genre "Stand-Up Comedy" ;
-    schema:ratingValue 8.6 ;
-    schema:sameAs <https://www.imdb.com/title/tt14544192/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt14544192/> .
-
 netflix:s8273 a schema:Movie ;
     rdfs:label "The Departed" ;
     dc:coverage "Hong Kong",
@@ -499,9 +507,9 @@ netflix:s8273 a schema:Movie ;
     schema:duration "PT2H31M"^^xsd:duration ;
     schema:genre "Dramas",
         "Thrillers" ;
-    schema:ratingValue 8.4 ;
-    schema:sameAs <https://www.imdb.com/title/tt0174126/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0174126/> .
+    schema:ratingValue 8.5 ;
+    schema:sameAs <https://www.imdb.com/title/tt0407887/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt0407887/> .
 
 netflix:s8405 a schema:Movie ;
     rdfs:label "The Lord of the Rings: The Return of the King" ;
@@ -586,24 +594,30 @@ netflix:s8615 a schema:Movie ;
     schema:sameAs <https://www.imdb.com/title/tt0117951/> ;
     rdfs:seeAlso <https://www.imdb.com/title/tt0117951/> .
 
-netflix:s8695 a schema:Movie ;
-    rdfs:label "War" ;
-    dc:coverage "Canada",
+netflix:s8669 a schema:Movie ;
+    rdfs:label "V for Vendetta" ;
+    dc:coverage "Germany",
+        "United Kingdom",
         "United States" ;
-    dc:date "April 1, 2019" ;
-    dc:issued "2007"^^xsd:gYear ;
-    dc:subject "Action & Adventure" ;
-    dc:title "War" ;
+    dc:date "October 1, 2018" ;
+    dc:issued "2005"^^xsd:gYear ;
+    dc:subject "Action & Adventure",
+        "Dramas",
+        "Sci-Fi & Fantasy" ;
+    dc:title "V for Vendetta" ;
     schema:contentRating "R" ;
-    schema:countryOfOrigin "Canada",
+    schema:countryOfOrigin "Germany",
+        "United Kingdom",
         "United States" ;
-    schema:datePublished "2007"^^xsd:gYear ;
-    schema:director directors:director_Philip_G__Atwell ;
-    schema:duration "PT1H43M"^^xsd:duration ;
-    schema:genre "Action & Adventure" ;
-    schema:ratingValue 8.6 ;
-    schema:sameAs <https://www.imdb.com/title/tt0126178/> ;
-    rdfs:seeAlso <https://www.imdb.com/title/tt0126178/> .
+    schema:datePublished "2005"^^xsd:gYear ;
+    schema:director directors:director_James_McTeigue ;
+    schema:duration "PT2H12M"^^xsd:duration ;
+    schema:genre "Action & Adventure",
+        "Dramas",
+        "Sci-Fi & Fantasy" ;
+    schema:ratingValue 8.1 ;
+    schema:sameAs <https://www.imdb.com/title/tt0434409/> ;
+    rdfs:seeAlso <https://www.imdb.com/title/tt0434409/> .
 
 netflix:s996 a schema:Movie ;
     rdfs:label "Vizontele" ;
@@ -630,34 +644,34 @@ netflix:s996 a schema:Movie ;
 netflix:catalog a schema:Dataset ;
     rdfs:label "Netflix & IMDb Movies"@en ;
     dc:description "Dataset linking Netflix titles with IMDb identifiers and ratings."@en ;
-    schema:hasPart netflix:s1397,
+    schema:hasPart netflix:s1099,
+        netflix:s1115,
         netflix:s1422,
-        netflix:s1887,
-        netflix:s2283,
+        netflix:s1674,
+        netflix:s1703,
+        netflix:s1822,
         netflix:s254,
-        netflix:s2730,
-        netflix:s3148,
-        netflix:s4722,
-        netflix:s5015,
+        netflix:s2864,
+        netflix:s3005,
+        netflix:s3179,
+        netflix:s341,
+        netflix:s393,
+        netflix:s4994,
         netflix:s5571,
         netflix:s565,
-        netflix:s595,
+        netflix:s6064,
         netflix:s6144,
-        netflix:s617,
+        netflix:s6257,
+        netflix:s6262,
         netflix:s6544,
-        netflix:s6861,
-        netflix:s6953,
-        netflix:s6967,
-        netflix:s7592,
-        netflix:s7669,
         netflix:s7803,
+        netflix:s7804,
         netflix:s7958,
-        netflix:s827,
         netflix:s8273,
         netflix:s8405,
         netflix:s8406,
         netflix:s8415,
         netflix:s8615,
-        netflix:s8695,
+        netflix:s8669,
         netflix:s996 .
 
