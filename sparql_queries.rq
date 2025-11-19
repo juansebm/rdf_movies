@@ -1,5 +1,4 @@
 BASE <http://raw.githubusercontent.com/juansebm/rdf_movies/main/netflix_imdb_movies.ttl>
-
 PREFIX schema: <http://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX directors: <http://raw.githubusercontent.com/juansebm/rdf_movies/main/directors.ttl#>
@@ -27,7 +26,7 @@ SELECT ?genre (COUNT(?movie) AS ?count) WHERE {
 # 4. Películas largas (>2h) con rating >8.5
 SELECT ?title ?duration ?rating WHERE {
     ?movie a schema:Movie ;
-           schema:name ?title ;
+           rdfs:label ?title ;
            schema:duration ?duration ;
            schema:ratingValue ?rating .
     FILTER (?rating > 8.5 && REGEX(?duration, "PT[2-9]H"))
@@ -36,7 +35,7 @@ SELECT ?title ?duration ?rating WHERE {
 # 5. Películas recientes (>=2020) con rating >8.0
 SELECT ?title ?year ?rating WHERE {
     ?movie a schema:Movie ;
-           schema:name ?title ;
+           rdfs:label ?title ;
            schema:datePublished ?year ;
            schema:ratingValue ?rating .
     FILTER (?year >= "2020"^^xsd:gYear && ?rating > 8.0)
@@ -45,7 +44,7 @@ SELECT ?title ?year ?rating WHERE {
 # 6. Coproducciones (múltiples países)
 SELECT ?title (GROUP_CONCAT(?country) AS ?countries) WHERE {
     ?movie a schema:Movie ;
-           schema:name ?title ;
+           rdfs:label ?title ;
            schema:countryOfOrigin ?country .
 } GROUP BY ?movie ?title HAVING (COUNT(?country) > 1)
 
@@ -60,7 +59,7 @@ SELECT ?decade (AVG(?rating) AS ?avg) (COUNT(?movie) AS ?count) WHERE {
 # 8. Películas con 3+ géneros y rating >=8.0
 SELECT ?title ?rating WHERE {
     ?movie a schema:Movie ;
-           schema:name ?title ;
+           rdfs:label ?title ;
            schema:ratingValue ?rating .
     FILTER (?rating >= 8.0)
     { SELECT ?movie WHERE {
@@ -72,13 +71,13 @@ SELECT ?title ?rating WHERE {
 # 9. Mejores documentales
 SELECT ?title ?rating ?year WHERE {
     ?movie a schema:Movie ;
-           schema:name ?title ;
+           rdfs:label ?title ;
            schema:genre "Documentaries" ;
            schema:ratingValue ?rating ;
            schema:datePublished ?year .
 } ORDER BY DESC(?rating) LIMIT 10
 
-# 10. ¿Qué directores se repiten? (requiere cargar directors.ttl desde raw GitHub)
+# 10. ¿Qué directores se repiten? (requiere cargar directors.ttl)
 FROM <http://raw.githubusercontent.com/juansebm/rdf_movies/main/directors.ttl>
 SELECT ?name (COUNT(?movie) AS ?count) (GROUP_CONCAT(?title; separator=", ") AS ?movies) WHERE {
     ?movie schema:director ?director ;
@@ -86,7 +85,7 @@ SELECT ?name (COUNT(?movie) AS ?count) (GROUP_CONCAT(?title; separator=", ") AS 
     ?director foaf:name ?name .
 } GROUP BY ?name HAVING (COUNT(?movie) > 1) ORDER BY DESC(?count)
 
-# 11. Películas con sus directores (requiere cargar directors.ttl desde raw GitHub)
+# 11. Películas con sus directores y rating >=8.5 (requiere cargar directors.ttl)
 FROM <http://raw.githubusercontent.com/juansebm/rdf_movies/main/directors.ttl>
 SELECT ?title ?directorName ?rating ?year WHERE {
     ?movie a schema:Movie ;
@@ -94,23 +93,21 @@ SELECT ?title ?directorName ?rating ?year WHERE {
            schema:director ?director ;
            schema:ratingValue ?rating ;
            schema:datePublished ?year .
-    # Acceder a propiedades del director desde el archivo separado
     ?director foaf:name ?directorName .
     FILTER (?rating >= 8.5)
 } ORDER BY DESC(?rating) LIMIT 10
 
-# 12. Directores con mejor promedio de rating (requiere cargar directors.ttl desde raw GitHub)
+# 12. Directores con mejor promedio de rating (requiere cargar directors.ttl)
 FROM <http://raw.githubusercontent.com/juansebm/rdf_movies/main/directors.ttl>
 SELECT ?directorName (AVG(?rating) AS ?avgRating) (COUNT(?movie) AS ?movieCount) WHERE {
     ?movie schema:director ?director ;
            schema:ratingValue ?rating .
-    # Consultar nombre del director desde el archivo separado
     ?director foaf:name ?directorName .
 } GROUP BY ?directorName 
 HAVING (COUNT(?movie) >= 2)
 ORDER BY DESC(?avgRating) DESC(?movieCount)
 
-# 13. Análisis de directores por década (requiere cargar directors.ttl desde raw GitHub)
+# 13. Análisis de directores por década (requiere cargar directors.ttl)
 FROM <http://raw.githubusercontent.com/juansebm/rdf_movies/main/directors.ttl>
 SELECT ?directorName ?decade (COUNT(?movie) AS ?movies) (AVG(?rating) AS ?avgRating) WHERE {
     ?movie schema:director ?director ;
