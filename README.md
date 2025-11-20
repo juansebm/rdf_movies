@@ -124,3 +124,4 @@ netflix_titles.csv
         │
  title.ratings.tsv
 ```
+PD: Algunos archivos no están aquí en el repositorio por motivos de que eran muy pesados (alrededor de Gigabytes de peso), por lo que se ignoraron en el archivo .gitignore.
